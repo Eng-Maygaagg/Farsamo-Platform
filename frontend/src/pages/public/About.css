@@ -1,0 +1,16 @@
+.about-hero {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white; padding: 4rem 0; text-align: center;
+}
+.about-hero h1 { font-size: 2.5rem; font-weight: 800; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.about-grid p { color: var(--text-muted); line-height: 1.8; }
+.team-card { text-align: center; }
+.team-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--primary); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem;
+}
+.team-role { color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; }
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }

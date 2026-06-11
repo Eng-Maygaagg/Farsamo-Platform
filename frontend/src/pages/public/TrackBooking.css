@@ -1,0 +1,24 @@
+.booking-timeline { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; position: relative; }
+.timeline-step { display: flex; align-items: flex-start; gap: 1rem; position: relative; padding-bottom: 2rem; }
+.timeline-dot {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg-secondary); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;
+}
+.timeline-step.complete .timeline-dot { background: var(--success); border-color: var(--success); color: white; }
+.timeline-step.current .timeline-dot { background: var(--primary); border-color: var(--primary); color: white; }
+.timeline-step.rejected .timeline-dot { background: var(--danger); border-color: var(--danger); color: white; }
+.timeline-line {
+  position: absolute; left: 17px; top: 36px; bottom: 0;
+  width: 2px; background: var(--border);
+}
+.timeline-step.complete .timeline-line { background: var(--success); }
+.timeline-content strong { display: block; }
+.timeline-content small { color: var(--text-muted); font-size: 0.8rem; }
+.booking-details-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.booking-details-grid p { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; }
